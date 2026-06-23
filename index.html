@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jarajapu Gowtham | Frontend Developer</title>
+<meta name="description" content="Frontend Developer from Visakhapatnam. HTML5, CSS3, JavaScript, 4 Projects including Team Project. Open to internships.">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root {
+    --bg: #0a0f1f;
+    --panel: rgba(255, 255, 255, 0.08);
+    --border: rgba(255, 255, 255, 0.15);
+    --text: #f1f5f9;
+  }
+  body {
+    margin: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.25), transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.25), transparent 40%),
+                radial-gradient(circle at 50% 100%, rgba(168, 85, 247, 0.2), transparent 35%),
+                var(--bg);
+    color: var(--text);
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+    * { box-sizing: border-box; }
+  .glass {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+  }
+  .glass:hover {
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 30px 80px rgba(59, 130, 246, 0.2);
+  }
+  .container-shell {
+    width: min(1200px, calc(100% - 32px));
+    margin: 0 auto;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #60a5fa, #c084fc, #f472b6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .btn-primary {
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+    transition: all 0.3s ease;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(236, 72, 153, 0.4);
+  }
+  .btn-glass {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+  }
+  .btn-glass:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(59, 130, 246, 0.5);
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  .float-anim {
+    animation: float 6s ease-in-out infinite;
+  }
+</style>
+</head>
+<body>
+
+<main class="container-shell pt-10 pb-12">
+
+  <!-- Hero -->
+  <section class="glass rounded-3xl p-8 sm:p-12 float-anim">
+    <div class="inline-block rounded-full border-blue-500/30 bg-blue-500/10 px-4 py-1 text-xs uppercase tracking-[0.3em] text-blue-300">Available for Internships</div>
+    <h1 class="mt-6 text-5xl font-bold tracking-tight sm:text-7xl">
+      <span class="gradient-text">Jarajapu Gowtham</span>
+    </h1>
+    <p class="mt-5 text-xl leading-8 text-slate-200 sm:text-2xl">
+      Frontend Developer crafting <span class="text-pink-400">fast</span> & <span class="text-purple-400">beautiful</span> web experiences
+    </p>
+    <p class="mt-4 text-slate-400">📍 Visakhapatnam Rural, Andhra Pradesh, India</p>
+    <div class="mt-10 flex-col gap-4 sm:flex-row">
+      <a href="#projects" class="btn-primary inline-flex items-center justify-center rounded-full px-7 py-3 text-base font-semibold text-white">
+        🚀 View Projects
+      </a>
+      <a href="/resume.pdf" download class="btn-glass inline-flex items-center justify-center rounded-full px-7 py-3 text-base font-semibold text-white">
+        📄 Download Resume
+      </a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="mt-8">
+    <div class="glass rounded-3xl p-8 sm:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold gradient-text">About Me</h2>
+      <p class="mt-5 max-w-4xl text-lg leading-8 text-slate-300">
+        I'm a Frontend Developer passionate about creating responsive, user-friendly websites. 
+        Skilled in <span class="text-blue-400 font-semibold">HTML5, CSS3, JavaScript</span> with API integration experience.
+        Built <span class="text-pink-400 font-semibold">4 Projects including 1 Team Project</span> deployed on GitHub Pages.
+        Currently mastering <span class="text-purple-400 font-semibold">MERN Stack</span> for full-stack development.
+        Open to internships and entry-level frontend roles where I can learn and grow.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="mt-8">
+    <div class="glass rounded-3xl p-8 sm:p-10">
+      <h2 class="text-3xl font-bold gradient-text">Tech Stack</h2>
+      <div class="mt-8 grid gap-6">
+        <div>
+          <div class="mb-2 flex justify-between"><span class="text-slate-200 font-medium">HTML5</span><span class="text-blue-400 font-bold">92%</span></div>
+          <div class="h-4 rounded-full bg-white/10 overflow-hidden"><div class="h-full bg-gradient-to-r from-blue-500 to-cyan-400" style="width:92%"></div></div>
+        </div>
+        <div>
+          <div class="mb-2 flex justify-between"><span class="text-slate-200 font-medium">CSS3</span><span class="text-pink-400 font-bold">90%</span></div>
+          <div class="h-4 rounded-full bg-white/10 overflow-hidden"><div class="h-full bg-gradient-to-r from-pink-500 to-rose-400" style="width:90%"></div></div>
+        </div>
+        <div>
+          <div class="mb-2 flex justify-between"><span class="text-slate-200 font-medium">JavaScript + API</span><span class="text-purple-400 font-bold">80%</span></div>
+          <div class="h-4 rounded-full bg-white/10 overflow-hidden"><div class="h-full bg-gradient-to-r from-purple-500 to-violet-400" style="width:80%"></div></div>
+        </div>
+        <div>
+          <div class="mb-2 flex justify-between"><span class="text-slate-200 font-medium">Responsive Design</span><span class="text-green-400 font-bold">88%</span></div>
+          <div class="h-4 rounded-full bg-white/10 overflow-hidden"><div class="h-full bg-gradient-to-r from-green-500 to-emerald-400" style="width:88%"></div></div>
+        </div>
+      </div>
+      <div class="mt-8 flex-wrap gap-3">
+        <span class="rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border-blue-400/30 px-4 py-2 text-sm text-blue-300">HTML5</span>
+        <span class="rounded-full bg-gradient-to-r from-pink-500/20 to-rose-500/20 border-pink-400/30 px-4 py-2 text-sm text-pink-300">CSS3</span>
+        <span class="rounded-full bg-gradient-to-r from-purple-500/20 to-violet-500/20 border-purple-400/30 px-4 py-2 text-sm text-purple-300">JavaScript</span>
+        <span class="rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border-green-400/30 px-4 py-2 text-sm text-green-300">API</span>
+        <span class="rounded-full bg-gradient-to-r from-orange-500/20 to-amber-500/20 border-orange-400/30 px-4 py-2 text-sm text-orange-300">Team Work</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects with DigiWallet Team Project -->
+  <section id="projects" class="mt-8">
+    <div class="glass rounded-3xl p-8 sm:p-10">
+      <h2 class="text-3xl font-bold gradient-text">Featured Projects</h2>
+      <div class="mt-8 grid gap-6">
+        
+        <article class="rounded-2xl border-blue-500/30 bg-gradient-to-br from-blue-500/10 to-transparent p-6 hover:border-blue-400 transition-all">
+          <h3 class="text-2xl font-bold text-blue-300">APSCHE Portal Redesign</h3>
+          <div class="mt-4 flex-wrap gap-2">
+            <span class="rounded-full bg-blue-500/20 px-3 py-1 text-xs text-blue-300 border-blue-400/30">HTML5</span>
+            <span class="rounded-full bg-cyan-500/20 px-3 py-1 text-xs text-cyan-300 border-cyan-400/30">Responsive</span>
+          </div>
+          <p class="mt-4 text-slate-300">Mobile-first portal redesign with modern navigation. Improved UX for 10K+ students.</p>
+          <div class="mt-5 flex gap-3">
+            <a href="https://github.com/jarajapugowtham/Apsche.practicemodel" target="_blank" class="btn-glass rounded-full px-5 py-2 text-sm text-white">GitHub</a>
+            <a href="https://jarajapugowtham.github.io/Apsche.practicemodel/" target="_blank" class="btn-primary rounded-full px-5 py-2 text-sm font-semibold text-white">Live Demo</a>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border-pink-500/30 bg-gradient-to-br from-pink-500/10 to-transparent p-6 hover:border-pink-400 transition-all">
+          <h3 class="text-2xl font-bold text-pink-300">SkyCast Weather App</h3>
+          <div class="mt-4 flex-wrap gap-2">
+            <span class="rounded-full bg-purple-500/20 px-3 py-1 text-xs text-purple-300 border-purple-400/30">JavaScript</span>
+            <span class="rounded-full bg-violet-500/20 px-3 py-1 text-xs text-violet-300 border-violet-400/30">API</span>
+          </div>
+          <p class="mt-4 text-slate-300">Real-time weather data via API integration. Dynamic UI with location search.</p>
+          <div class="mt-5 flex gap-3">
+            <a href="https://github.com/jarajapugowtham/Sky-cast-" target="_blank" class="btn-glass rounded-full px-5 py-2 text-sm text-white">GitHub</a>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border-green-500/30 bg-gradient-to-br from-green-500/10 to-transparent p-6 hover:border-green-400 transition-all">
+          <h3 class="text-2xl font-bold text-green-300">Pelli-Kaavala Matrimony UI</h3>
+          <div class="mt-4 flex-wrap gap-2">
+            <span class="rounded-full bg-green-500/20 px-3 py-1 text-xs text-green-300 border-green-400/30">UI/UX</span>
+            <span class="rounded-full bg-emerald-500/20 px-3 py-1 text-xs text-emerald-300 border-emerald-400/30">Design</span>
+          </div>
+          <p class="mt-4 text-slate-300">Clean matrimonial interface with mobile-first design. Focus on user trust & flow.</p>
+        </article>
+
+        <!-- DigiWallet Team Project -->
+        <article class="rounded-2xl border-orange-500/30 bg-gradient-to-br from-orange-500/10 to-transparent p-6 hover:border-orange-400 transition-all">
+          <div class="mb-3 inline-block rounded-full border-orange-400/40 bg-orange-400/10 px-3 py-1 text-xs font-semibold text-orange-300">👥 Team Project</div>
+          <h3 class="text-2xl font-bold text-orange-300">DigiWallet - UPI App UI</h3>
+          <div class="mt-4 flex-wrap gap-2">
+            <span class="rounded-full bg-orange-500/20 px-3 py-1 text-xs text-orange-300 border-orange-400/30">HTML5</span>
+            <span class="rounded-full bg-amber-500/20 px-3 py-1 text-xs text-amber-300 border-amber-400/30">CSS3</span>
+            <span class="rounded-full bg-yellow-500/20 px-3 py-1 text-xs text-yellow-300 border-yellow-400/30">JavaScript</span>
+          </div>
+          <div class="mt-4 grid gap-3 text-sm leading-7 text-slate-300">
+            <p><span class="font-medium text-white">Role: </span>Frontend Developer - UI & Responsive Design</p>
+            <p><span class="font-medium text-white">Problem: </span>Mobile users ki simple UPI wallet interface kavali</p>
+            <p><span class="font-medium text-white">Solution: </span>Team lo nenu complete UI + mobile responsive design build chesanu</p>
+            <p><span class="font-medium text-white">Impact: </span>3 members team, 2 weeks MVP. Clean UI with transaction flow</p>
+          </div>
+          <div class="mt-5 flex gap-3">
+            <a href="https://github.com/vinay180806/DigiWallet" target="_blank" class="btn-glass rounded-full px-5 py-2 text-sm text-white">View Code →</a>
+            <span class="rounded-full bg-white/5 px-4 py-2 text-sm text-slate-400">Live Demo: Coming Soon</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="mt-8">
+    <div class="glass rounded-3xl p-8 sm:p-10">
+      <h2 class="text-2xl font-semibold">Experience</h2>
+      <div class="mt-6 space-y-6">
+        <div class="relative pl-6">
+          <div class="absolute left-0 top-2 h-3 w-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-500"></div>
+          <div class="border-l border-white/10 pl-6">
+            <h3 class="text-lg font-semibold">MERN Stack Developer</h3>
+            <p class="mt-1 text-slate-300">Adhoc Network Tech Company</p>
+            <p class="mt-1 text-sm text-slate-400">May 2026 - Present (2 months) • Visakhapatnam</p>
+            <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-300 list-disc pl-4">
+              <li>Learning MongoDB, Express.js, React, Node.js with hands-on projects</li>
+              <li>Building full-stack portfolio with dynamic content and contact forms</li>
+              <li>Writing RESTful APIs and connecting frontend to MongoDB</li>
+            </ul>
+          </div>
+        </div>
+        <div class="relative pl-6">
+          <div class="absolute left-0 top-2 h-3 w-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-500"></div>
+          <div class="border-l border-white/10 pl-6">
+            <h3 class="text-lg font-semibold">Administrative Assistant</h3>
+            <p class="mt-1 text-slate-300">Visakhapatnam Port Authority</p>
+            <p class="mt-1 text-sm text-slate-400">Jan 2023 - Aug 2023 (8 months) • Visakhapatnam</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="mt-8 pb-12">
+    <div class="glass rounded-3xl p-8 sm:p-10 border-t-4 border-purple-500">
+      <h2 class="text-3xl font-bold gradient-text">Let's Connect</h2>
+      <div class="mt-8 grid gap-8 lg:grid-cols-2">
+        <div class="space-y-5 text-slate-300">
+          <p class="text-lg">📧 <a href="mailto:jarajapugowtham0851@gmail.com" class="text-blue-400 underline hover:text-blue-300">jarajapugowtham0851@gmail.com</a></p>
+          <p class="text-lg">💼 <a href="https://www.linkedin.com/in/jarajapu-gowtham-b304112ab" target="_blank" class="text-blue-400 underline hover:text-blue-300">LinkedIn Profile</a></p>
+          <p class="text-lg">💻 <a href="https://github.com/jarajapugowtham" target="_blank" class="text-purple-400 underline hover:text-purple-300">GitHub</a></p>
+          <p class="text-lg">📱 +91 63052 43360</p>
+        </div>
+        <form class="grid gap-4 rounded-2xl border-purple-500/30 bg-gradient-to-br from-purple-500/5 to-pink-500/5 p-6">
+          <input type="text" placeholder="Your Name" class="rounded-xl border-white/10 bg-white/5 px-4 py-3 outline-none focus:border-pink-400 text-white placeholder:text-slate-500">
+          <input type="email" placeholder="Your Email" class="rounded-xl border-white/10 bg-white/5 px-4 py-3 outline-none focus:border-pink-400 text-white placeholder:text-slate-500">
+          <textarea rows="4" placeholder="Your Message" class="rounded-xl border-white/10 bg-white/5 px-4 py-3 outline-none focus:border-pink-400 text-white placeholder:text-slate-500"></textarea>
+          <button type="submit" class="btn-primary rounded-full py-3 text-base font-semibold text-white">Send Message ✨</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+</body>
+  </html>
