@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jarajapu Gowtham | Full Stack Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    :root{
+        --bg:#0a0a0f; --card:#111118; --purple:#7f5af0; --green:#2cb67d; --pink:#ff79c6; --text:#e0e0e0; --muted:#94a1b2;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);overflow-x:hidden}
+
+    /* Animated BG Particles */
+    #particles{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1}
+
+   .container{max-width:1200px;margin:0 auto;padding:80px 20px}
+
+    /* Glassmorphism Card */
+   .glass{
+        background:rgba(17,17,24,0.6);
+        backdrop-filter:blur(25px);
+        border:1px solid rgba(127,90,240,0.2);
+        border-radius:24px;
+        padding:50px;
+        box-shadow:0 0 40px rgba(127,90,240,0.1);
+        transition:0.4s;
+    }
+   .glass:hover{transform:translateY(-10px);box-shadow:0 0 60px rgba(127,90,240,0.3);border-color:var(--purple)}
+
+    /* Navbar */
+    nav{position:fixed;top:0;width:100%;padding:20px;backdrop-filter:blur(20px);background:rgba(10,10,15,0.8);z-index:1000;display:flex;justify-content:center;gap:30px}
+    nav a{color:var(--text);text-decoration:none;font-weight:600;transition:0.3s}
+    nav a:hover{color:var(--purple)}
+
+    /* Hero */
+    header{text-align:center;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+   .profile-img{width:180px;height:180px;border-radius:50%;border:5px solid var(--purple);margin-bottom:25px;box-shadow:0 0 50px var(--purple);animation:glow 2s ease-in-out infinite alternate}
+    @keyframes glow{from{box-shadow:0 0 30px var(--purple)}to{box-shadow:0 0 60px var(--pink)}}
+    h1{font-size:3.5rem;font-weight:800;background:linear-gradient(90deg,var(--purple),var(--pink),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+   .typing{font-size:1.5rem;color:var(--muted);margin:15px 0;height:35px}
+   .btn{
+        display:inline-block;padding:14px 32px;margin:10px;
+        background:linear-gradient(90deg,var(--purple),var(--green));
+        color:#fff;text-decoration:none;border-radius:50px;font-weight:700;
+        transition:0.3s;box-shadow:0 8px 25px rgba(127,90,240,0.4)
+    }
+   .btn:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 12px 35px rgba(127,90,240,0.6)}
+   .socials a{color:#fff;font-size:1.8rem;margin:0 15px;transition:0.3s}
+   .socials a:hover{color:var(--purple);transform:translateY(-5px)}
+
+    /* Projects */
+    h2{font-size:2.8rem;text-align:center;margin-bottom:50px;background:linear-gradient(90deg,var(--purple),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+   .project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:40px}
+   .project h3{color:var(--purple);font-size:1.6rem;margin-bottom:12px}
+   .tech{color:var(--green);font-size:0.9rem;margin-bottom:18px;font-weight:600}
+   .project p{color:var(--muted);line-height:1.7;margin-bottom:25px}
+
+    /* Skills Bar */
+  .skill{margin-bottom:20px}
+  .skill-name{display:flex;justify-content:space-between;margin-bottom:8px}
+  .bar{height:10px;background:#222;border-radius:10px;overflow:hidden}
+  .progress{height:100%;background:linear-gradient(90deg,var(--purple),var(--green));border-radius:10px;width:0;transition:width 2s ease}
+
+    footer{text-align:center;padding:40px;color:var(--muted)}
+    @media(max-width:768px){h1{font-size:2.2rem}.glass{padding:30px}nav{gap:15px;font-size:0.9rem}}
+</style>
+</head>
+<body>
+<canvas id="particles"></canvas>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+</nav>
+
+<header id="home" class="container">
+    <img src="https://via.placeholder.com/180" alt="Gowtham" class="profile-img">
+    <h1>Jarajapu Gowtham</h1>
+    <div class="typing" id="typing"></div>
+    <p><i class="fa-solid fa-location-dot"></i> Visakhapatnam, AP</p>
+    <div style="margin:25px 0">
+        <a href="#projects" class="btn">View Work</a>
+        <a href="mailto:jarajapugowtham@gmail.com" class="btn">Hire Me</a>
+    </div>
+    <div class="socials">
+        <a href="https://github.com/jarajapugowtham" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/your-linkedin" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:jarajapugowtham@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+</header>
+
+<section id="about" class="container">
+    <div class="glass">
+        <h2>About Me</h2>
+        <p style="font-size:1.1rem;line-height:1.8;color:var(--muted)">I'm a passionate Full Stack Developer with expertise in MERN Stack. I build fast, responsive, and beautiful web applications. I love turning ideas into reality with clean code and modern design. Currently open to Internships and Full-time roles.</p>
+    </div>
+</section>
+
+<section id="skills" class="container">
+    <h2>My Skills</h2>
+    <div class="glass">
+        <div class="skill"><div class="skill-name"><span>HTML/CSS/JS</span><span>95%</span></div><div class="bar"><div class="progress" data-width="95%"></div></div></div>
+        <div class="skill"><div class="skill-name"><span>React.js</span><span>90%</span></div><div class="bar"><div class="progress" data-width="90%"></div></div></div>
+        <div class="skill"><div class="skill-name"><span>Node.js + Express</span><span>85%</span></div><div class="bar"><div class="progress" data-width="85%"></div></div></div>
+        <div class="skill"><div class="skill-name"><span>MongoDB</span><span>80%</span></div><div class="bar"><div class="progress" data-width="80%"></div></div></div>
+    </div>
+</section>
+
+<section id="projects" class="container">
+    <h2>Featured Projects</h2>
+    <div class="project-grid">
+
+        <div class="glass project">
+            <h3><i class="fa-solid fa-cloud-sun"></i> Sky-cast Weather App</h3>
+            <p class="tech">HTML | CSS | JS | OpenWeather API</p>
+            <p>Real-time weather app with 5-day forecast. Features city search, responsive design, and beautiful UI with glassmorphism effects.</p>
+            <a href="https://sky-cast-gamma-steel.vercel.app" target="_blank" class="btn">Live Demo</a>
+            <a href="https://github.com/jarajapugowtham/sky-cast" target="_blank" class="btn">GitHub</a>
+        </div>
+
+        <div class="glass project">
+            <h3><i class="fa-solid fa-graduation-cap"></i> APSCHE Practice Model</h3>
+            <p class="tech">HTML | CSS | JavaScript</p>
+            <p>Interactive quiz platform for students. Includes timer, multiple topics, score tracking, and instant feedback system.</p>
+            <a href="https://jarajapugowtham.github.io/Apsche.practicemodel/" target="_blank" class="btn">Live Demo</a>
+            <a href="https://github.com/jarajapugowtham/Apsche.practicemodel" target="_blank" class="btn">GitHub</a>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Jarajapu Gowtham. Designed & Built with ❤️</p>
+</footer>
+
+<script>
+    // 1. TYPING EFFECT
+    const texts = ["Full Stack Developer", "MERN Stack Expert", "UI/UX Enthusiast"];
+    let i=0,j=0,isDeleting=false;
+    function type(){
+        const el = document.getElementById("typing");
+        el.innerHTML = texts[i].substring(0,j) + '<span style="border-right:2px solid #7f5af0"></span>';
+        if(!isDeleting && j++ == texts[i].length){isDeleting=true;setTimeout(type,2000);return}
+        if(isDeleting && j-- == 0){isDeleting=false;i=(i+1)%texts.length}
+        setTimeout(type, isDeleting?80:120)
+    }
+    type();
+
+    // 2. SKILL BAR ANIMATION ON SCROLL
+    const observer = new IntersectionObserver(entries=>{
+        entries.forEach(entry=>{
+            if(entry.isIntersecting){
+                document.querySelectorAll('.progress').forEach(bar=>{
+                    bar.style.width = bar.getAttribute('data-width')
+                })
+            }
+        })
+    },{threshold:0.5});
+    observer.observe(document.getElementById('skills'));
+
+    // 3. PARTICLES BACKGROUND
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+    let particles = [];
+    for(let i=0;i<80;i++){particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*2,dx:(Math.random()-0.5)*0.5,dy:(Math.random()-0.5)*0.5})}
+    function animate(){
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        ctx.fillStyle = 'rgba(127,90,240,0.5)';
+        particles.forEach(p=>{
+            ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();
+            p.x+=p.dx; p.y+=p.dy;
+            if(p.x<0||p.x>canvas.width)p.dx*=-1;
+            if(p.y<0||p.y>canvas.height)p.dy*=-1;
+        });
+        requestAnimationFrame(animate);
+    }
+    animate();
+    window.addEventListener('resize',()=>{canvas.width=window.innerWidth;canvas.height=window.innerHeight});
+</script>
+
+</body>
+  </html>
