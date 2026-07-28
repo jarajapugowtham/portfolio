@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#05070c" />
+  <title>Jarajapu Gowtham | MERN Stack Developer</title>
+  <meta name="description" content="Jarajapu Gowtham — MERN Stack Developer building fast, responsive web applications with clean UIs and reliable backends." />
+  <meta name="keywords" content="Full Stack Developer, MERN Stack, React, Node.js, MongoDB, JavaScript, Portfolio" />
+  <meta name="author" content="Jarajapu Gowtham" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / LinkedIn / WhatsApp -->
+  <meta property="og:title" content="Jarajapu Gowtham | MERN Stack Developer" />
+  <meta property="og:description" content="MERN Stack Developer from Visakhapatnam. Building fast, responsive web applications with clean UI and solid backend logic." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://portfolio-jhsy.onrender.com" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/jarajapugowtham/jarajapugowtham/main/preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jarajapu Gowtham | MERN Stack Developer" />
+  <meta name="twitter:description" content="MERN Stack Developer from Visakhapatnam. Building fast, responsive web applications." />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/jarajapugowtham/jarajapugowtham/main/preview.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/jarajapugowtham/jarajapugowtham/main/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg: #05070c; --surface: #0e1222; --text: #eaf0ff; --muted: #9aa3c7;
+      --line: #1f2744; --accent: #6d5aff; --accent-2: #00f0ff; --accent-3: #ff2e93;
+      --radius: 14px; --max: 1080px;
+    }
+    [data-theme="light"] {
+      --bg: #f9fafb; --surface: #ffffff; --text: #111827; --muted: #4b5563;
+      --line: #e5e7eb; --accent: #6d28d9; --accent-2: #0d9488; --accent-3: #db2777;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.6;
+      -webkit-font-smoothing: antialiased; overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+    
+    /* Custom Cursor */
+    .cursor-dot, .cursor-ring { position: fixed; top: 0; left: 0; border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); mix-blend-mode: screen; display: none; }
+    .cursor-dot { width: 8px; height: 8px; background: var(--accent-2); box-shadow: 0 0 18px var(--accent-2); }
+    .cursor-ring { width: 36px; height: 36px; border: 2px solid color-mix(in srgb, var(--accent) 60%, var(--accent-2)); transition: width 0.15s ease, height 0.15s ease; }
+    body.hovering .cursor-ring { width: 52px; height: 52px; border-color: var(--accent-3); }
+
+    /* Animated Background */
+    .animated-bg { position: fixed; inset: 0; z-index: -1; background: radial-gradient(circle at 15% 20%, rgba(109, 90, 255, 0.22), transparent 40%), radial-gradient(circle at 85% 10%, rgba(0, 240, 255, 0.18), transparent 35%), radial-gradient(circle at 50% 90%, rgba(255, 46, 147, 0.14), transparent 42%); filter: blur(60px); animation: bgShift 18s ease-in-out infinite alternate; transform: translateY(var(--parallax-y, 0px)); }
+    @keyframes bgShift { 0% { transform: scale(1) translateY(var(--parallax-y, 0px)); } 100% { transform: scale(1.08) translate(-10px, 10px) translateY(var(--parallax-y, 0px)); } }
+
+    /* Navbar */
+    .topbar { position: sticky; top: 0; z-index: 100; background: color-mix(in srgb, var(--bg) 85%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+    .navwrap { height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .brand { font-weight: 700; font-size: 1rem; }
+    .brand span { color: var(--accent-2); }
+    .navlinks { display: flex; gap: 24px; }
+    .navlinks a { color: var(--muted); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    .navlinks a:hover { color: var(--text); }
+    .theme-btn { width: 40px; height: 40px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--text); cursor: pointer; display: grid; place-items: center; }
+
+    /* Sections */
+    section { padding: 80px 0; }
+    section + section { border-top: 1px solid var(--line); }
+    .section-title { font-size: clamp(1.6rem, 3.5vw, 2rem); font-weight: 700; margin-bottom: 12px; }
+    .section-sub { color: var(--muted); max-width: 680px; margin-bottom: 36px; }
+
+    /* Cards with Spotlight + Tilt */
+    .card {
+      background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 28px; position: relative; overflow: hidden; transform-style: preserve-3d;
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.25s ease;
+    }
+    .card::before {
+      content: ""; position: absolute; inset: 0;
+      background: radial-gradient(800px circle at var(--spot-x, 50%) var(--spot-y, 50%), color-mix(in srgb, var(--accent) 22%, transparent), transparent 40%);
+      opacity: 0; transition: opacity 0.25s ease; pointer-events: none; z-index: 0;
+    }
+    .card:hover::before { opacity: 1; }
+    .card:hover { transform: translateY(-6px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)); box-shadow: 0 26px 60px rgba(0,0,0,0.45); border-color: color-mix(in srgb, var(--accent) 40%, var(--line)); }
+    .card-inner { position: relative; z-index: 1; }
+
+    .grid { display: grid; gap: 20px; }
+    .about-grid, .contact-grid { grid-template-columns: 1fr 1fr; }
+    .content-card h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 10px; }
+    .content-card p, .content-card li { color: var(--muted); font-size: 0.95rem; line-height: 1.7; }
+    .content-card ul { padding-left: 18px; display: grid; gap: 6px; }
+
+    /* Hero */
+    .hero { padding: 110px 0 80px; }
+    .hero-kicker { display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; letter-spacing: -0.03em; margin: 14px 0; }
+    .hero-desc { color: var(--muted); max-width: 640px; font-size: 1rem; margin-bottom: 18px; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+    .socials { display: flex; gap: 12px; }
+    .socials a { width: 40px; height: 40px; border-radius: 8px; display: grid; place-items: center; background: var(--surface); border: 1px solid var(--line); transition: 0.2s; }
+    .socials a:hover { transform: translateY(-3px); border-color: var(--accent); }
+
+    /* Buttons */
+    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 22px; border-radius: 12px; font-weight: 700; font-size: 0.9rem; border: 1px solid transparent; cursor: pointer; transition: 0.2s; }
+    .btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #0b0f19; }
+    .btn-primary:hover { transform: translateY(-3px); }
+    .btn-secondary { background: transparent; border-color: var(--line); color: var(--text); }
+    .btn-secondary:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+    /* Skills */
+    .skills { display: grid; gap: 14px; }
+    .skill-row { padding: 16px; border-radius: 10px; background: var(--surface); border: 1px solid var(--line); }
+    .skill-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 600; font-size: 0.95rem; }
+    .bar { height: 8px; background: rgba(255,255,255,0.06); border-radius: 999px; overflow: hidden; }
+    .progress { height: 100%; width: 0; border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3)); transition: width 1.8s cubic-bezier(.2,.8,.2,1); }
+
+    /* Projects */
+    .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .project { padding: 24px; display: flex; flex-direction: column; gap: 14px; }
+    .project h3 { font-size: 1.15rem; font-weight: 700; }
+    .tech { color: var(--accent-2); font-weight: 600; font-size: 0.85rem; }
+    .project p { color: var(--muted); font-size: 0.95rem; }
+    .project-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: auto; }
+    .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 14%, transparent); border: 1px solid color-mix(in srgb, var(--accent) 26%, transparent); font-size: 0.8rem; width: fit-content; }
+
+    /* Contact */
+    .contact-info p { display: flex; align-items: center; gap: 10px; color: var(--muted); margin: 12px 0; font-size: 0.95rem; }
+    .contact-form { display: grid; gap: 12px; }
+    input, textarea { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--text); font: inherit; outline: none; }
+    input:focus, textarea:focus { border-color: var(--accent); }
+
+    /* Footer */
+    footer { padding: 32px 0 40px; text-align: center; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); }
+
+    /* Scroll Reveal */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.in-view { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 900px) { .about-grid, .contact-grid { grid-template-columns: 1fr; } .navlinks { display: none; } }
+    @media (pointer: coarse) { .cursor-dot, .cursor-ring { display: none !important; } }
+  </style>
+</head>
+<body>
+  <div class="cursor-dot"></div><div class="cursor-ring"></div><div class="animated-bg"></div>
+
+  <div class="topbar">
+    <div class="container navwrap">
+      <a class="brand" href="#home">Jarajapu <span>Gowtham</span></a>
+      <div class="navlinks">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
+        <a href="#experience">Experience</a><a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a><a href="#contact">Contact</a>
+      </div>
+      <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme"><i class="fa-solid fa-moon" id="theme-icon"></i></button>
+    </div>
+  </div>
+
+  <header id="home" class="hero container">
+    <div class="hero-kicker"><i class="fa-solid fa-circle-check"></i><span>Open to internships and full‑time roles</span></div>
+    <h1>MERN Stack Developer — Clean UI, Solid Backend</h1>
+    <p class="hero-desc">I build fast, responsive web applications with intuitive interfaces, reliable APIs, and practical real‑world functionality.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#projects"><i class="fa-solid fa-rocket"></i> View Projects</a>
+      <a class="btn btn-secondary" href="#contact"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+    </div>
+    <div class="socials">
+      <a href="https://github.com/jarajapugowtham" target="_blank" aria-label="GitHub profile"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/jarajapu-gowtham-b304112ab" target="_blank" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="mailto:jarajapugowtham0851@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </header>
+
+  <section id="about"><div class="container"><h2 class="section-title reveal">About</h2><p class="section-sub reveal">Clear, concise, and focused on what I actually do.</p>
+    <div class="grid about-grid">
+      <div class="card content-card reveal"><div class="card-inner"><h3>What I do</h3><p>I’m a Full Stack Developer specializing in MERN stack applications. I build user‑friendly interfaces, connect them to reliable backends, and ship features that work well in production.</p></div></div>
+      <div class="card content-card reveal"><div class="card-inner"><h3>What I’m looking for</h3><p>I’m currently open to internships and full‑time roles where I can contribute to real products, learn from strong teams, and grow into a well‑rounded engineer.</p></div></div>
+    </div>
+  </div></section>
+
+  <section id="skills"><div class="container"><h2 class="section-title reveal">Skills</h2><p class="section-sub reveal">Core technologies and tools I use regularly.</p>
+    <div class="card content-card"><div class="card-inner"><div class="skills">
+      <div class="skill-row"><div class="skill-head"><span>HTML / CSS / JavaScript</span><span>Advanced</span></div><div class="bar"><div class="progress" data-width="95%"></div></div></div>
+      <div class="skill-row"><div class="skill-head"><span>React.js</span><span>Advanced</span></div><div class="bar"><div class="progress" data-width="90%"></div></div></div>
+      <div class="skill-row"><div class="skill-head"><span>Node.js / Express</span><span>Intermediate</span></div><div class="bar"><div class="progress" data-width="85%"></div></div></div>
+      <div class="skill-row"><div class="skill-head"><span>MongoDB</span><span>Intermediate</span></div><div class="bar"><div class="progress" data-width="80%"></div></div></div>
+      <div class="skill-row"><div class="skill-head"><span>Git / GitHub</span><span>Intermediate</span></div><div class="bar"><div class="progress" data-width="85%"></div></div></div>
+    </div></div></div>
+  </div></section>
+
+  <section id="experience"><div class="container"><h2 class="section-title reveal">Experience</h2><p class="section-sub reveal">Professional experience and internships.</p>
+    <div class="grid">
+      <div class="card content-card reveal"><div class="card-inner"><h3>MERN Stack Internship</h3><h4 style="color:var(--accent-2); margin:6px 0 10px;">ADHOC NETWORK</h4><p style="color:var(--muted); margin-bottom:12px;"><i class="fa-solid fa-calendar"></i> May 2026 – Jun 2026</p><ul><li>Built REST APIs with Node.js/Express and integrated MongoDB for data persistence.</li><li>Developed React components and connected them to backend services for CRUD operations.</li></ul></div></div>
+      <div class="card content-card reveal"><div class="card-inner"><h3>Visakhapatnam Port Trust</h3><p style="color:var(--muted); margin:6px 0 10px;"><i class="fa-solid fa-calendar"></i> Jan 2023 – Aug 2023</p><ul><li>Observed operational workflows and digital systems used in port operations.</li><li>Developed teamwork, communication, and adaptability in a large organization.</li></ul></div></div>
+    </div>
+  </div></section>
+
+  <section id="projects"><div class="container"><h2 class="section-title reveal">Projects</h2><p class="section-sub reveal">Selected work with real impact and learning.</p>
+    <div class="project-grid">
+      <article class="card project reveal"><div class="card-inner"><span class="badge"><i class="fa-solid fa-cloud-sun"></i> Live App</span><h3>Sky‑cast Weather App</h3><div class="tech">HTML • CSS • JS • OpenWeather API</div><p>Real‑time weather app with 5‑day forecast and city search. Implemented debounced API calls, loading states, and error handling for failed requests.</p><div class="project-actions"><a class="btn btn-primary" href="https://sky-cast-gamma-steel.vercel.app" target="_blank">Live Demo</a><a class="btn btn-secondary" href="https://github.com/jarajapugowtham/sky-cast" target="_blank">GitHub</a></div></div></article>
+      <article class="card project reveal"><div class="card-inner"><span class="badge"><i class="fa-solid fa-graduation-cap"></i> Practice Tool</span><h3>APSCHE Practice Model</h3><div class="tech">HTML • CSS • JavaScript</div><p>Interactive quiz platform for students with timer and score tracking. Built question logic, result calculation, and a clean, mobile‑friendly UI.</p><div class="project-actions"><a class="btn btn-primary" href="https://jarajapugowtham.github.io/Apsche.practicemodel/" target="_blank">Live Demo</a><a class="btn btn-secondary" href="https://github.com/jarajapugowtham/Apsche.practicemodel" target="_blank">GitHub</a></div></div></article>
+    </div>
+  </div></section>
+
+  <section id="certifications"><div class="container"><h2 class="section-title reveal">Certifications & Achievements</h2><p class="section-sub reveal">Continuous learning and professional development.</p>
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+      <div class="card content-card reveal"><div class="card-inner"><h3><i class="fa-solid fa-certificate" style="color:var(--accent-2)"></i> MERN Stack Internship</h3><p><b>ADHOC NETWORK</b></p><p style="color:var(--muted);">Jun 2026</p></div></div>
+      <div class="card content-card reveal"><div class="card-inner"><h3><i class="fa-solid fa-certificate" style="color:var(--accent-2)"></i> AI & ML Research Program</h3><p><b>ULearn, ISA & University of Colorado Denver</b></p></div></div>
+      <div class="card content-card reveal"><div class="card-inner"><h3><i class="fa-solid fa-certificate" style="color:var(--accent-2)"></i> Python Essentials</h3><p><b>Cisco Networking Academy</b></p></div></div>
+      <div class="card content-card reveal"><div class="card-inner"><h3><i class="fa-solid fa-trophy" style="color:var(--accent-2)"></i> Adhoc Aditya Tech Fusion Hackathon</h3><p><b>Certificate of Appreciation</b></p></div></div>
+    </div>
+  </div></section>
+
+  <section id="contact"><div class="container"><h2 class="section-title reveal">Contact</h2><p class="section-sub reveal">Let’s work together.</p>
+    <div class="grid contact-grid">
+      <div class="card content-card contact-info reveal"><div class="card-inner"><h3>Let’s Talk</h3><p>I’m available for internships and junior developer roles.</p><p><i class="fa-solid fa-envelope"></i> <a href="mailto:jarajapugowtham0851@gmail.com">jarajapugowtham0851@gmail.com</a></p><p><i class="fa-solid fa-location-dot"></i> Visakhapatnam, Andhra Pradesh</p></div></div>
+      <div class="card content-card reveal">
+        <form class="contact-form" action="https://formspree.io/f/xblkjqkz" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name" />
+          <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email" />
+          <textarea name="message" rows="5" placeholder="Your Message" required aria-label="Your Message"></textarea>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div></section>
+
+  <footer><div class="container"><p>© 2026 Jarajapu Gowtham. Built with passion.</p></div></footer>
+
+  <script>
+    function toggleTheme(){ const root = document.documentElement; const icon = document.getElementById('theme-icon'); if(root.getAttribute('data-theme') === 'light'){ root.removeAttribute('data-theme'); icon.className = 'fa-solid fa-moon'; } else { root.setAttribute('data-theme', 'light'); icon.className = 'fa-solid fa-sun'; } }
+    const isFinePointer = window.matchMedia('(pointer: fine)').matches;
+    if (isFinePointer) { const cursorDot = document.querySelector('.cursor-dot'); const cursorRing = document.querySelector('.cursor-ring'); cursorDot.style.display = 'block'; cursorRing.style.display = 'block'; let mouseX = 0, mouseY = 0; let ringX = 0, ringY = 0; document.addEventListener('mousemove', (e) => { mouseX = e.clientX; mouseY = e.clientY; cursorDot.style.left = mouseX + 'px'; cursorDot.style.top = mouseY + 'px'; }); function animateCursor(){ ringX += (mouseX - ringX) * 0.15; ringY += (mouseY - ringY) * 0.15; cursorRing.style.left = ringX + 'px'; cursorRing.style.top = ringY + 'px'; requestAnimationFrame(animateCursor); } animateCursor(); const hoverables = document.querySelectorAll('a, button, .btn, .badge, input, textarea'); hoverables.forEach(el => { el.addEventListener('mouseenter', () => document.body.classList.add('hovering')); el.addEventListener('mouseleave', () => document.body.classList.remove('hovering')); }); }
+    const cards = document.querySelectorAll('.card'); cards.forEach(card => { card.addEventListener('mousemove', (e) => { const rect = card.getBoundingClientRect(); const x = ((e.clientX - rect.left) / rect.width) * 100; const y = ((e.clientY - rect.top) / rect.height) * 100; card.style.setProperty('--spot-x', x + '%'); card.style.setProperty('--spot-y', y + '%'); }); });
+    const projects = document.querySelectorAll('.project'); projects.forEach(project => { project.addEventListener('mousemove', (e) => { const rect = project.getBoundingClientRect(); const x = (e.clientX - rect.left) / rect.width; const y = (e.clientY - rect.top) / rect.height; const tiltX = (y - 0.5) * -10; const tiltY = (x - 0.5) * 10; project.style.setProperty('--tilt-x', tiltX + 'deg'); project.style.setProperty('--tilt-y', tiltY + 'deg'); }); project.addEventListener('mouseleave', () => { project.style.setProperty('--tilt-x', '0deg'); project.style.setProperty('--tilt-y', '0deg'); }); });
+    const observer = new IntersectionObserver(entries => { entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('in-view'); if(entry.target.classList.contains('skill-row')){ const progress = entry.target.querySelector('.progress'); if(progress) progress.style.width = progress.dataset.width; } }); }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal, .skill-row, .project').forEach(el => observer.observe(el));
+    window.addEventListener('scroll', () => { const scrolled = window.scrollY; const bg = document.querySelector('.animated-bg'); const parallax = Math.min(scrolled * 0.15, 120); bg.style.setProperty('--parallax-y', parallax + 'px'); });
+  </script>
+</body>
+                                                                                                                                                                            </html>
