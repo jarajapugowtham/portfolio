@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jarajapu Gowtham | Full Stack Developer</title>
+    <meta name="description" content="Portfolio of Jarajapu Gowtham, BCA Student from Aditya Degree College, Visakhapatnam. MERN Stack Developer." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700;800&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- MARVEL EFFECTS -->
+    <div id="spiderman-web"></div>
+    <div id="ironman-hud">
+        <div class="hud-corner tl"></div><div class="hud-corner tr"></div>
+        <div class="hud-corner bl"></div><div class="hud-corner br"></div>
+        <div class="hud-center"><div class="reactor-core"></div><p class="hud-text">SYSTEM ONLINE</p></div>
+    </div>
+
+    <div id="preloader"><div class="preloader-content"><div class="reactor-loader"><div class="core-inner"></div><div class="core-outer"></div><div class="ring"></div></div><div class="loading-text">INITIALIZING SYSTEM...</div></div></div>
+    <div id="rocket-easter-egg" title="Click to launch! 🚀">🚀</div>
+    <canvas id="rocket-canvas"></canvas>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Gowtham<span class="highlight">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li><li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certs</a></li>
+                <li><a href="#contact" class="btn-nav">Let's Talk</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="sound-toggle" class="theme-btn"><i class="fas fa-volume-mute"></i></button>
+                <button id="theme-toggle" class="theme-btn"><i class="fas fa-sun"></i></button>
+                <div class="hamburger"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p class="greeting reveal">Hello, I am</p>
+            <h1 class="reveal delay-1">Jarajapu <span class="text-gradient">Gowtham</span></h1>
+            <h2 class="reveal delay-2">BCA Student <span class="typing-text">MERN Stack Developer</span></h2>
+            <p class="hero-desc reveal delay-3">BCA Student from Aditya Degree College, Visakhapatnam. Passionate about building responsive websites and full-stack applications.</p>
+            <div class="hero-buttons reveal delay-4" style="justify-content: center;">
+                <a href="#projects" class="btn btn-primary">View My Work <i class="fas fa-arrow-right"></i></a>
+                <a href="resume.pdf" target="_blank" class="btn btn-secondary">Download Resume</a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator"><div class="mouse"></div><p>Scroll Down</p></a>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">About <span class="text-gradient">Me</span></h2>
+            <div class="about-content">
+                <div class="terminal-window glass-panel reveal tilt-card" style="width: 100%; max-width: 800px; margin: 0 auto;">
+                    <div class="terminal-header"><div class="dots"><span></span><span></span><span></span></div><div class="terminal-title">gowtham@portfolio: ~</div></div>
+                    <div class="terminal-body">
+                        <p><span class="prompt-user">gowtham@portfolio</span>:<span class="prompt-path">~</span>$ whoami</p>
+                        <p class="output">Jarajapu Gowtham — BCA Student at Aditya Degree College, Visakhapatnam. MERN Stack Developer</p>
+                        <p><span class="prompt-user">gowtham@portfolio</span>:<span class="prompt-path">~</span>$ cat experience.txt</p>
+                        <p class="output">
+                            <b>1. MERN Stack Internship</b> | May 2026 - June 2026<br>
+                            Actively participated in real-time project activities. Built MERN stack applications and improved problem-solving skills.<br><br>
+                            <b>2. Visakhapatnam Port Trust Internship</b> | Jan 2023 - Aug 2023<br>
+                            Learned operational workflows and digital systems. Developed teamwork and adaptability skills.
+                        </p>
+                        <p><span class="prompt-user">gowtham@portfolio</span>:<span class="prompt-path">~</span>$ cat education.txt</p>
+                        <p class="output">Bachelor of Computer Applications - Aditya Degree College, Visakhapatnam</p>
+                        <div id="terminal-output"></div>
+                        <div class="terminal-input-line"><span class="prompt-user">gowtham@portfolio</span>:<span class="prompt-path">~</span>$&nbsp;<input id="terminal-input" type="text" placeholder="type 'help' and press Enter..." /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">My <span class="text-gradient">Tech Stack</span></h2>
+            <div class="skills-container reveal">
+                <div class="skill-category glass-panel tilt-card"><h3><i class="fas fa-code"></i> Frontend</h3><div class="skill-tags"><span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span><span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span><span class="skill-tag"><i class="fab fa-js"></i> JavaScript ES6+</span><span class="skill-tag"><i class="fab fa-react"></i> React.js</span><span class="skill-tag"><i class="fab fa-bootstrap"></i> Bootstrap</span><span class="skill-tag"><i class="fas fa-wind"></i> Tailwind CSS</span></div></div>
+                <div class="skill-category glass-panel tilt-card"><h3><i class="fas fa-server"></i> Backend & Database</h3><div class="skill-tags"><span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span><span class="skill-tag"><i class="fas fa-server"></i> Express.js</span><span class="skill-tag"><i class="fas fa-database"></i> MongoDB</span><span class="skill-tag"><i class="fas fa-database"></i> MySQL</span><span class="skill-tag"><i class="fas fa-cloud"></i> REST API</span></div></div>
+                <div class="skill-category glass-panel tilt-card"><h3><i class="fas fa-laptop-code"></i> Languages</h3><div class="skill-tags"><span class="skill-tag"><i class="fab fa-python"></i> Python</span><span class="skill-tag"><i class="fab fa-java"></i> Java</span><span class="skill-tag"><i class="fas fa-code"></i> C Programming</span></div></div>
+                <div class="skill-category glass-panel tilt-card"><h3><i class="fas fa-tools"></i> Tools & Others</h3><div class="skill-tags"><span class="skill-tag"><i class="fab fa-git-alt"></i> Git & GitHub</span><span class="skill-tag"><i class="fas fa-network-wired"></i> MERN Stack</span><span class="skill-tag"><i class="fas fa-cloud-upload-alt"></i> Vercel</span><span class="skill-tag"><i class="fas fa-mobile-alt"></i> Responsive Design</span><span class="skill-tag"><i class="fas fa-plug"></i> API Integration</span><span class="skill-tag"><i class="fas fa-lightbulb"></i> Problem Solving</span></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Featured <span class="text-gradient">Projects</span></h2>
+            <div class="projects-grid">
+                <div class="project-card glass-panel reveal tilt-card">
+                    <div class="project-img"><img src="https://placehold.co/600x400/00d2ff/0a0a0f?text=Sky+Cast+Weather+App" alt="Sky Cast Weather App"><div class="project-overlay"><a href="https://sky-cast-gamma-steel.vercel.app" target="_blank" class="btn-icon"><i class="fas fa-external-link-alt"></i></a><a href="https://github.com/jarajapugowtham/Sky-cast-" target="_blank" class="btn-icon"><i class="fab fa-github"></i></a></div></div>
+                    <div class="project-info"><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>OpenWeather API</span></div><h3>Sky Cast - Weather Application</h3><p>Weather app using OpenWeather API. Shows real-time temp, humidity, wind. Deployed on Vercel.</p></div>
+                </div>
+                <div class="project-card glass-panel reveal delay-1 tilt-card">
+                    <div class="project-img"><img src="https://placehold.co/600x400/e23636/ffffff?text=APSCHE+Practice+Portal" alt="Apsche Practice Model"><div class="project-overlay"><a href="https://apsche-practicemodel.vercel.app" target="_blank" class="btn-icon"><i class="fas fa-external-link-alt"></i></a><a href="https://github.com/jarajapugowtham/Apsche.practicemodel" target="_blank" class="btn-icon"><i class="fab fa-github"></i></a></div></div>
+                    <div class="project-info"><div class="project-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive</span></div><h3>APSCHE Practice Portal</h3><p>UI clone of APSCHE Web Options Portal for student practice. Features: rank eligibility, college selection, priority setting.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Certifications & <span class="text-gradient">Achievements</span></h2>
+            <div class="certs-grid reveal">
+                <div class="cert-card glass-panel tilt-card"><i class="fas fa-certificate"></i><h3>MERN Stack Internship</h3><p>May 04, 2026 - June 24, 2026</p></div>
+                <div class="cert-card glass-panel tilt-card"><i class="fas fa-certificate"></i><h3>AI & ML Research Program</h3><p>ULearn, ISA & University of Colorado Denver</p></div>
+                <div class="cert-card glass-panel tilt-card"><i class="fas fa-certificate"></i><h3>Python Essentials</h3><p>Cisco Networking Academy</p></div>
+                <div class="cert-card glass-panel tilt-card"><i class="fas fa-certificate"></i><h3>C Essentials 1 & 2</h3><p>Cisco Networking Academy</p></div>
+                <div class="cert-card glass-panel tilt-card"><i class="fas fa-trophy"></i><h3>Aditya Tech Fusion Hackathon</h3><p>Certificate of Appreciation</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Get in <span class="text-gradient">Touch</span></h2>
+            <div class="contact-wrapper">
+                <div class="contact-info glass-panel reveal tilt-card">
+                    <h3>Let's Connect</h3>
+                    <div class="contact-details">
+                        <div class="contact-item"><div class="icon-box"><i class="fas fa-envelope"></i></div><div><h4>Email</h4><a href="mailto:Jarajapugowtham0851@gmail.com">Jarajapugowtham0851@gmail.com</a></div></div>
+                        <div class="contact-item"><div class="icon-box"><i class="fas fa-map-marker-alt"></i></div><div><h4>Location</h4><p>Visakhapatnam, Andhra Pradesh</p></div></div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/jarajapugowtham" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/jarajapu-gowtham-b304112ab/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form glass-panel reveal delay-1 tilt-card">
+                    <form id="form"><div class="form-group"><input type="text" id="name" required placeholder=" "><label>Your Name</label></div><div class="form-group"><input type="email" id="email" required placeholder=" "><label>Your Email</label></div><div class="form-group"><textarea id="message" required placeholder=" " rows="4"></textarea><label>Your Message</label></div><button type="submit" class="btn btn-primary btn-block">Send Message <i class="fas fa-paper-plane"></i></button></form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer><div class="container"><div class="footer-content"><p>&copy; 2026 Jarajapu Gowtham. All rights reserved.</p><div class="footer-links"><a href="https://github.com/jarajapugowtham" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/jarajapu-gowtham-b304112ab/" target="_blank">LinkedIn</a></div></div></div></footer>
+    <script src="script.js"></script>
+</body>
+      </html>
